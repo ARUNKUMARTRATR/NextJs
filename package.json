@@ -1,0 +1,24 @@
+{
+  "name": "bayada_demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@contentful/live-preview": "^2.11.11",
+    "antd": "^5.11.0",
+    "contentful": "^10.6.5",
+    "next": "14.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1"
+  }
+}
