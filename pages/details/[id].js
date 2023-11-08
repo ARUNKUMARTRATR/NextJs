@@ -5,8 +5,8 @@ import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import { ContentfulLivePreview } from "@contentful/live-preview";
 
 
-function Details(props) {
-  const updatedEntries = useContentfulLiveUpdates(props.data);
+function Details({data,preview}) {
+  const updatedEntries = useContentfulLiveUpdates(data);
   const details = getContentfulData(updatedEntries)[0];
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -19,7 +19,7 @@ function Details(props) {
         <div className="left">
           {isClient ? (
             <img
-              src={details.image.url}
+              src={details?.image?.url}
               alt="itemImage"
               className="image_sec"
             />
@@ -87,7 +87,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data: details,
-      prev: preview ? true : false,
+      preview: preview ? true : false,
     },
   };
 }
