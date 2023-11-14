@@ -1,0 +1,46 @@
+.app_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .details {
+        width: 30%;
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #f1f0f0;
+            border-radius: 4px;
+            background-color: rgb(154, 235, 33);
+            color: black;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin-top: 26px;
+        }
+
+        
+    }
+}
+
+.list_sec{
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
+    overflow-y: auto;
+    ul{
+        list-style-type: none;
+        padding: 10px;
+    }
+}

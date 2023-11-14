@@ -1,5 +1,4 @@
 const contentful = require("contentful");
-
 const createClient = (spaceId, env, preview) => {
   return contentful.createClient({
     space: spaceId,

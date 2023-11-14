@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getContentfulClient } from "../services/contentfulHelper";
-import Landing  from "@/components/landing";
+import JsonRender from "@/components/jsonRender/json-render";
 
 export default function Home(props) {
   return (
@@ -11,20 +11,18 @@ export default function Home(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Landing listItems={props.items}></Landing>
+      {/* <Landing listItems={props.items}></Landing> */}
+      <JsonRender articleData={props.data.items} />
     </>
   );
 }
 
 export async function getServerSideProps() {
-  let data = {};
-  await getContentfulClient(false)
+  let data = await getContentfulClient(false, "Develop")
     .getEntries()
-    .then((res) => (data = res))
-    .catch((error) => {
-      data = error;
-    });
+    .then((res) => res)
+    .catch((error) => error);
   return {
-    props: data,
+    props: { data },
   };
 }

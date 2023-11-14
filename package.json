@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@contentful/live-preview": "^2.11.11",
+    "@contentful/app-sdk": "4.22.0",
+    "@contentful/react-apps-toolkit": "1.2.16",
     "antd": "^5.11.0",
     "contentful": "^10.6.5",
     "next": "14.0.1",
