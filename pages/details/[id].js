@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from "react";
 import { getContentfulClient } from "../../services/contentfulHelper";
 import { getContentfulData } from "../../services/contentfulDataModifier";
